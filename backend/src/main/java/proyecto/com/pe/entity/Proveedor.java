@@ -1,6 +1,4 @@
-package proyecto.com.pe.model;
-
-import java.time.LocalDate;
+package proyecto.com.pe.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -14,35 +12,32 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "empleado")
+@Table(name = "proveedor")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Empleado {
+public class Proveedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idEmpleado")
-    private Integer idEmpleado;
+    @Column(name = "idProveedor")
+    private Integer idProveedor;
 
     @Column(name = "nombre", nullable = false)
     private String nombre;
 
-    @Column(name = "apellido", nullable = false)
-    private String apellido;
+    @Column(name = "ruc", nullable = false, unique = true)
+    private String ruc;
 
-    @Column(name = "dni", nullable = false, unique = true)
-    private String dni;
+    @Column(name = "direccion", nullable = false)
+    private String direccion;
 
-    @Column(name = "fechaIngreso", nullable = false)
-    private LocalDate fechaIngreso;
+    @Column(name = "telefono", nullable = false)
+    private String telefono;
 
-    @Column(name = "puesto", nullable = false)
-    private String puesto;
-
-    @Column(name = "salario", nullable = false)
-    private Double salario;
+    @Column(name = "email", nullable = false)
+    private String email;
 
     @Column(name = "activo", columnDefinition = "TINYINT(1)")
     private Boolean activo = true;

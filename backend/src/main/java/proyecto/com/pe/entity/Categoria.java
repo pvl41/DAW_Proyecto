@@ -1,4 +1,4 @@
-package proyecto.com.pe.model;
+package proyecto.com.pe.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

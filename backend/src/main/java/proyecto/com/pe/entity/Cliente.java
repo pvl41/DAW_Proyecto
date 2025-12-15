@@ -1,4 +1,4 @@
-package proyecto.com.pe.model;
+package proyecto.com.pe.entity;
 import jakarta.persistence.*; // Usando jakarta.persistence.* para modernidad
 import java.time.LocalDate;
 
@@ -26,6 +26,9 @@ public class Cliente {
 
     @Column(name = "dni", length = 10, nullable = false, unique = true)
     private String dni;
+
+    @Column(nullable = false, unique = true)
+    private String username;
 
     @Column(name = "fechaNacimiento")
     private LocalDate fechaNacimiento;

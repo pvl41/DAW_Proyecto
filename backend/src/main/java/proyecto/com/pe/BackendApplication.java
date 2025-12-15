@@ -1,4 +1,4 @@
-package proyecto.com.pe.backend;
+package proyecto.com.pe;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
